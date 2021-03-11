@@ -29,5 +29,33 @@
     flex-basis: 30%;
     display: block;
     height: 100%;
+    border-right: 1px solid #e8e8e8;
+  }
+
+  #chat {
+    background-color: #f7f9fa;
+    flex-grow: 1;
+
+    #chatPlaceholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      flex-direction: column;
+
+      h2 {
+        font-size: 35px;
+        font-weight: normal;
+        color: #555555;
+      }
+      .seperator {
+        width: 50%;
+        border-top: 1px solid #eaeaea;
+        margin: 30px 0px;
+      }
+      p {
+        text-align: center;
+      }
+    }
   }
 }
