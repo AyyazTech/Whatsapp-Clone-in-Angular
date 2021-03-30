@@ -18,7 +18,7 @@
       <p>WhatsApp is available for Mac. <a href="#">Get it here</a></p>
     </div>
 
-    <app-chat *ngIf="conversation"></app-chat>
+    <app-chat [conversation]="conversation" *ngIf="conversation"></app-chat>
   </div>
 </div>
 

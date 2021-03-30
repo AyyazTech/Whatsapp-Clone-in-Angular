@@ -6,17 +6,80 @@
   flex-direction: column;
 
   #header {
-    flex-basis: 67px;
+    min-height: 67px;
     background-color: #eeeeee;
     box-shadow: 2px 0px 4px #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .avatarSection {
+      display: flex;
+      .picture {
+        min-width: 40px;
+        max-width: 40px;
+        margin: 0 10px;
+        img {
+          max-width: 100%;
+        }
+      }
+      .nameSection {
+        flex-grow: 1;
+        color: #545454;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .actionButtons {
+      min-width: 50px;
+      display: flex;
+
+      img {
+        width: 20px;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    }
   }
 
   #body {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    padding: 20px 50px;
+    overflow: scroll;
+    .message {
+      margin-top: 10px;
+      display: flex;
+      align-items: flex-start;
+      color: #767676;
+      flex-direction: column;
+      .messageContent {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+
+        .time {
+          text-align: right;
+          color: #959698;
+          font-size: 13px;
+          margin-top: 5px;
+        }
+      }
+
+      &.me {
+        align-items: flex-end;
+        .messageContent {
+          background-color: #dcf7c5;
+        }
+      }
+    }
   }
 
   #footer {
-    flex-basis: 67px;
+    min-height: 67px;
     background-color: #f0eeed;
     display: flex;
 
@@ -37,6 +100,7 @@
         resize: none;
         outline: none;
         padding: 14px;
+        font-family: sans-serif;
         box-sizing: border-box;
       }
     }
